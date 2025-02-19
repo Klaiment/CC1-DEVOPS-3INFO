@@ -56,4 +56,4 @@ jobs:
         run: netlify build
 
       - name: Deploy to Netlify
-        run: NETLIFY_AUTH_TOKEN=${{ secrets.NETLIFY_AUTH_TOKEN }} netlify deploy --prod
+        run: netlify deploy --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
