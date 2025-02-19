@@ -13,3 +13,7 @@ Ce projet est destiné à valider les connaissances en DevOps des élèves de 3�
 [![Build & Deploy](https://github.com/Klaiment/CC1-DEVOPS-3INFO/actions/workflows/deploy.yml/badge.svg)](https://github.com/Klaiment/CC1-DEVOPS-3INFO/actions/workflows/node.js.yml)
 [![Tests](https://github.com/Klaiment/CC1-DEVOPS-3INFO/actions/workflows/ci.yml/badge.svg)](https://github.com/Klaiment/CC1-DEVOPS-3INFO/actions/workflows/node.js.yml)
 
+# Lien du projet :  https://cc1-eff.netlify.app
+
+## Informations
+- Taille du repo : ![GitHub repo size](https://img.shields.io/github/repo-size/Klaiment/CC1-DEVOPS-3INFO)
