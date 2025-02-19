@@ -24,15 +24,12 @@ jobs:
     - run: npm run build --if-present
     - run: npm run test
 
-    # Define badge for the build status (can be used in README)
-    - name: "Release Status Badge"
-      uses: peter-evans/workflow-dispatch@v1
+    - name: Repository Dispatch
+      uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.GHB_TOKEN }}
-      env:
-        BADGE_STATUS: "Release Status"
-        GITHUB_REPOSITORY: "Klaiment/CC1-DEVOPS-3INFO"
-
+        repository: Klaiment/CC1-DEVOPS-3INFO
+        event-type: build
   deploy:
     name: 'Deploy'
     runs-on: ubuntu-latest
@@ -56,11 +53,9 @@ jobs:
       - name: Deploy to Netlify
         run: netlify deploy --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
-      # Define badge for deploy status (can be used in README)
-      - name: "Deployment Status Badge"
-        uses: peter-evans/workflow-dispatch@v1
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GHB_TOKEN }}
-        env:
-          BADGE_STATUS: "Deployment Status"
-          GITHUB_REPOSITORY: "Klaiment/CC1-DEVOPS-3INFO"
+          repository: Klaiment/CC1-DEVOPS-3INFO
+          event-type: deploy
