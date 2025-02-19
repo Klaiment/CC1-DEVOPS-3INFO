@@ -50,7 +50,7 @@ jobs:
         run: npm install -g netlify-cli
 
       - name: Link Netlify Site
-        run: netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
+        run: NETLIFY_AUTH_TOKEN=${{ secrets.NETLIFY_AUTH_TOKEN }} netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
       
       - name: Netlify Build
         run: netlify build
