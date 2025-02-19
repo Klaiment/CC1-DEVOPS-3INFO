@@ -53,7 +53,7 @@ jobs:
         run: NETLIFY_AUTH_TOKEN=${{ secrets.NETLIFY_AUTH_TOKEN }} netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
       
       - name: Netlify Build
-        run: netlify build
+        run: NETLIFY_AUTH_TOKEN=${{ secrets.NETLIFY_AUTH_TOKEN }} netlify build
 
       - name: Deploy to Netlify
         run: netlify deploy --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
