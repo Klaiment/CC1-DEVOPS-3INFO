@@ -49,9 +49,6 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Authenticate Netlify CLI
-        run: netlify login --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      
       - name: Link Netlify Site
         run: netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
       
